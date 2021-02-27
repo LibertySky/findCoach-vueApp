@@ -11,7 +11,7 @@ export default {
           id: 'c1',
           firstName: 'Max',
           lastName: 'Full-Stack',
-          areas: ['frontend', 'backend', 'career'],
+          areas: ['frontend', 'backend'],
           description:
             "I'm Max and I've worked as a fullstack web developer for years. Let me help you become a developer as well!",
           hourlyRate: 30
