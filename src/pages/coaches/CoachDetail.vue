@@ -30,6 +30,16 @@
 <script>
 export default {
   props: ['id'],
+  data() {
+    return {
+      selectedCoach: null,
+    };
+  },
+  created() {
+    this.selectedCoach = this.$store.getters['coaches/coaches'].find(
+      (coach) => coach.id === this.id
+    );
+  },
   computed: {
     fullName() {
       return this.selectedCoach.firstName + ' ' + this.selectedCoach.lastName;
@@ -46,16 +56,6 @@ export default {
     contactLink() {
       return this.$route.path + '/' + this.id + '/contact';
     },
-  },
-  data() {
-    return {
-      selectedCoach: null,
-    };
-  },
-  created() {
-    this.selectedCoach = this.$store.getters['coaches/coaches'].find(
-      (coach) => coach.id === this.id
-    );
   },
 };
 </script>
